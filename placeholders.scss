@@ -1,0 +1,51 @@
+@import "bourbon/bourbon";
+//Border radius
+%border-radius-full-50percent { border-radius:50% 50% 50% 50% ; } 
+//Display
+%display-block  { display: block; }
+%display-none   { display: none; }
+
+//Clearfix
+%clearfix {
+	//*zoom: 1;  /* The star is here to prevent other browsers from reading and applying this rule. */
+	&:after { content: ""; display: table; clear: both; }
+} 
+// font
+%font-size-base { font-size: 1em   }; //16px !default
+%font-size-14   { font-size: em(14)   }; //16px !default
+%float-left     { float: left ;}
+
+%height-inherit { height: inherit; }
+//Line height
+%line-height-1     { line-height:1; }
+%line-height-2     { line-height:2; }
+%line-height-3     { line-height:3; }
+ 
+//overflow
+%overflow { overflow:hidden; }
+%overflow-x { overflow-x:hidden; }
+%overflow-y { overflow-y:hidden; }
+%overflow-hidden { overflow:hidden; }
+
+%padding-right-16 { padding-right: em(16); }
+//Position type
+%position-relative { position: relative; }
+%position-absolute { position: absolute; }
+%position-fixed 	 { position: fixed; } 
+
+//Position location
+%position-top-0	     { top:    0; } 
+%position-bottom-0	 { bottom: 0; } 
+%position-left-0	   { left:   0; } 
+%position-right-0	   { right:  0; } 
+
+%position-left-auto	 { left:auto; } 
+
+%pointer-events-none  { pointer-events: none; }
+
+//text wrapper
+%text-ellipsis     { text-overflow: ellipsis; white-space: nowrap; }
+%text-transform-capitalize { text-transform: capitalize;}
+
+//width
+%width-100percent { width:100%;  }
