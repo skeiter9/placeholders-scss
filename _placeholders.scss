@@ -1,5 +1,5 @@
 //Require bourbon
-@import "bourbon/bourbon";
+ //@import "bourbon/bourbon";
  
 // VARIABLES
 $color-primary         : #03a9f4 !default;  
@@ -23,7 +23,7 @@ $font-size--base: 1em;
 %display--block         { display: block; }
 %display--inline        { display: inline; }
 %display--inline-block  { display: inline-block; } 
-%display-none           { display: none; }
+%display--none           { display: none; }
 
 //Clearfix
 %clearfix {
@@ -78,24 +78,35 @@ $font-size--base: 1em;
 %padding--base     { padding: $font-size--base; }
 %padding-right--base  { padding-right: $font-size--base; }
 //Position type
-%position-relative { position: relative; }
-%position-absolute { position: absolute; }
-%position-fixed 	 { position: fixed; } 
+%position--relative { position: relative; }
+%position--absolute { position: absolute; }
+%position--fixed 	 { position: fixed; } 
 
 //Position location
-%top--0	     { top:    0;    } 
-%bottom--0   { bottom: 0;    } 
-%left--0	   { left:   0;    } 
-%right--0	   { right:  0;    } 
-%left--auto	 { left:   auto; } 
-%right--auto { right:  auto; } 
+%top--0	      { top:    0;    } 
+%bottom--0    { bottom: 0;    } 
+%left--0	    { left:   0;    } 
+%right--0	    { right:  0;    } 
+%left--auto	  { left:   auto; } 
+%right--auto  { right:  auto; } 
+%bottom--auto { bottom: auto; } 
+%top--auto    { top:    auto; } 
 
-%pointer-events-none  { pointer-events: none; }
+%pointer-events--none  { pointer-events: none; }
 
 //Text
 %text-align--center         { text-align: center; } 
-%text--ellipsis             { @include text-wrapper;}
+%text-overflow--ellipsis    { @include text-wrapper;}
 %text-transform--capitalize { text-transform: capitalize;}
  
 //Width
-%width--100percent { width:100%;  }
+%width--10percent  { width:10%;  }
+%width--20percent  { width:20%;  }
+%width--30percent  { width:30%;  }
+%width--40percent  { width:40%;  }
+%width--50percent  { width:50%;  }
+%width--60percent  { width:60%;  }
+%width--70percent  { width:70%;  }
+%width--80percent  { width:80%;  }
+%width--90percent  { width:90%;  }
+%width--100percent { width:100%; }
