@@ -1,64 +1,102 @@
 //Require bourbon
 @import "bourbon/bourbon";
+ 
+// VARIABLES
+$color-primary         : #03a9f4 !default;  
+$color-secondary       : #009688 !default;   
+$color-black           : #000000 !default;   
+$color-white           : #ffffff !default;   
 
-%block-center {
-	margin-left:auto;
-	margin-right:auto;
+$font-size--base: 1em;
+
+// MIXINS 
+@mixin text-wrapper(){ //apply text's parent
+  text-overflow: ellipsis;
+  white-space: nowrap; 
 }
-//Border radius
-%border-radius-full-50percent { border-radius:50% 50% 50% 50% ; } 
-//Display
-%display-block  { display: block; }
-%display-none   { display: none; }
+
+//PLACEHOLDERS
+
+%border-radius--50percent { border-radius:50% 50% 50% 50% ; }
+%border-radius-2px        { border-radius:em(2px ); } 
+
+%display--block         { display: block; }
+%display--inline        { display: inline; }
+%display--inline-block  { display: inline-block; } 
+%display-none           { display: none; }
 
 //Clearfix
 %clearfix {
 	//*zoom: 1;  /* The star is here to prevent other browsers from reading and applying this rule. */
 	&:after { content: ""; display: table; clear: both; }
-} 
+}
+// color
+%color--white      { color: $color-white  } 
+%color--black      { color: $color-black  } 
+%color--primary    { color: $color-primary  } 
+%color--secondary  { color: $color-secondary  } 
+
 // font
-%font-size-base { font-size: 1em   }; //16px !default
-%font-size-14   { font-size: em(14)   }; //16px !default
-%float-left     { float: left ;}
+%font-size--1em  { font-size: 1em   }; //16px !default
+%font-size--14   { font-size: em(14)   }; //16px !default
 
-%height-inherit { height: inherit; }
-//Line height
-%line-height-1     { line-height:1; }
-%line-height-2     { line-height:2; }
-%line-height-3     { line-height:3; }
+%font-weight--100 { font-weight: 100 ; }
+%font-weight--200 { font-weight: 200 ; }
+%font-weight--300 { font-weight: 300 ; }
+%font-weight--400 { font-weight: 400 ; }
+%font-weight--500 { font-weight: 500 ; }
  
- //Margin
-%margin-top-16     { margin-top:    em(16 , 16); } 
-%margin-bottom-16  { margin-bottom: em(16 , 16); } 
-%margin-left-16    { margin-left:   em(16 , 16); } 
-%margin-right-16   { margin-right:  em(16 , 16); } 
+%float--left     { float: left ;}
+%float--right    { float: right ;}
+%float--none     { float: none ;}
 
-//overflow
-%overflow { overflow:hidden; }
-%overflow-x { overflow-x:hidden; }
-%overflow-y { overflow-y:hidden; }
-%overflow-hidden { overflow:hidden; }
+%height--inherit { height: inherit; }
+%height--100percent { height: 100%; }
+//Line height
+%line-height--1     { line-height:1; }
+%line-height--2     { line-height:2; }
+%line-height--3     { line-height:3; }
 
-%padding-right-16 { padding-right: em(16); }
+//margin
+%margin-top--0       { margin-top:    0;                }
+%margin-top--base    { margin-top:    $font-size--base; }
+%margin-bottom--base { margin-bottom: $font-size--base; }
+%margin-right--base  { margin-right:  $font-size--base; }
+%margin-left--base   { margin-left:   $font-size--base; }
+
+%bg--primary    { background-color: $color-primary; }
+%bg--secondary  { background-color: $color-secondary; }
+%bg--white      { background-color: $color-white; }
+%bg--black      { background-color: $color-black; } 
+
+
+//overflow 
+%overflow-x--hidden { overflow-x:hidden; }
+%overflow-y--hidden { overflow-y:hidden; }
+%overflow--hidden   { overflow:hidden; }
+
+%padding--0        { padding: 0; }
+%padding--base     { padding: $font-size--base; }
+%padding-right--base  { padding-right: $font-size--base; }
 //Position type
 %position-relative { position: relative; }
 %position-absolute { position: absolute; }
 %position-fixed 	 { position: fixed; } 
 
 //Position location
-%position-top-0	     { top:    0; } 
-%position-bottom-0	 { bottom: 0; } 
-%position-left-0	   { left:   0; } 
-%position-right-0	   { right:  0; } 
-
-%position-left-auto	 { left:auto; } 
+%top--0	     { top:    0;    } 
+%bottom--0	 { bottom: 0;    } 
+%left--0	   { left:   0;    } 
+%right--0	   { right:  0;    } 
+%left--auto	 { left:   auto; } 
+%right--auto { right:  auto; } 
 
 %pointer-events-none  { pointer-events: none; }
 
-//text wrapper
-%text-ellipsis     { text-overflow: ellipsis; white-space: nowrap; }
-%text-transform-capitalize { text-transform: capitalize;}
-
-%text-align-center { text-align: center; }
-//width
-%width-100percent { width:100%;  }
+//Text
+%text-align--center         { text-align: center; } 
+%text--ellipsis             { @include text-wrapper;}
+%text-transform--capitalize { text-transform: capitalize;}
+ 
+//Width
+%width--100percent { width:100%;  }
