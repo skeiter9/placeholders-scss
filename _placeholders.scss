@@ -23,7 +23,7 @@ $font-size--base: 1em;
 %display--block         { display: block; }
 %display--inline        { display: inline; }
 %display--inline-block  { display: inline-block; } 
-%display--none           { display: none; }
+%display--none          { display: none; }
 
 //Clearfix
 %clearfix {
@@ -57,7 +57,16 @@ $font-size--base: 1em;
 %line-height--3     { line-height:3; }
 
 //margin
-%margin-top--0       { margin-top:    0;                }
+%margin-top--0       { margin-top:    0; }
+%margin-left--0      { margin-left:   0; }
+%margin-right--0     { margin-right:  0; }
+%margin-bottom--0    { margin-top:    0; }
+
+%margin-top--auto       { margin-top:    auto; }
+%margin-left--auto      { margin-left:   auto; }
+%margin-right--auto     { margin-right:  auto; }
+%margin-bottom--auto    { margin-top:    auto; }
+
 %margin-top--base    { margin-top:    $font-size--base; }
 %margin-bottom--base { margin-bottom: $font-size--base; }
 %margin-right--base  { margin-right:  $font-size--base; }
@@ -76,17 +85,24 @@ $font-size--base: 1em;
 
 %padding--0        { padding: 0; }
 %padding--base     { padding: $font-size--base; }
+%padding-bottom--base     { padding-bottom: $font-size--base; }
 %padding-right--base  { padding-right: $font-size--base; }
 //Position type
 %position--relative { position: relative; }
 %position--absolute { position: absolute; }
-%position--fixed 	 { position: fixed; } 
+%position--fixed 	  { position: fixed; } 
 
 //Position location
 %top--0	      { top:    0;    } 
 %bottom--0    { bottom: 0;    } 
 %left--0	    { left:   0;    } 
 %right--0	    { right:  0;    } 
+
+%top--base	    { top:    $font-size--base;    } 
+%bottom--base   { bottom: $font-size--base;    } 
+%left--base	    { left:   $font-size--base;    } 
+%right--base	  { right:  $font-size--base;    } 
+
 %left--auto	  { left:   auto; } 
 %right--auto  { right:  auto; } 
 %bottom--auto { bottom: auto; } 
@@ -110,3 +126,9 @@ $font-size--base: 1em;
 %width--80percent  { width:80%;  }
 %width--90percent  { width:90%;  }
 %width--100percent { width:100%; }
+
+%block--center {
+	@extend %display--block;
+	@extend %margin-left--auto;
+	@extend %margin-right--auto;
+}
