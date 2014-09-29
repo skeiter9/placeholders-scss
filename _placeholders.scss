@@ -10,7 +10,7 @@ $color-white           : #ffffff !default;
 $font-size--base: 1em;
 
 // MIXINS 
-@mixin text-wrapper(){ //apply text's parent
+@mixin text-wrapper() { //apply text's parent
   text-overflow: ellipsis;
   white-space: nowrap; 
 }
@@ -18,7 +18,9 @@ $font-size--base: 1em;
 //PLACEHOLDERS
 
 %border-radius--50percent { border-radius:50% 50% 50% 50% ; }
-%border-radius-2px        { border-radius:em(2px ); } 
+%border-radius-2px { border-radius:em(2px); } 
+
+%box-sizing--border-box { @include box-sizing( border-box ); } 
 
 %display--block         { display: block; }
 %display--inline        { display: inline; }
@@ -30,6 +32,12 @@ $font-size--base: 1em;
 	//*zoom: 1;  /* The star is here to prevent other browsers from reading and applying this rule. */
 	&:after { content: ""; display: table; clear: both; }
 }
+%bg--transparent { background-color: transparent; }
+%bg--primary { background-color: $color-primary; }
+%bg--secondary { background-color: $color-secondary; }
+%bg--white { background-color: $color-white; }
+%bg--black { background-color: $color-black; } 
+
 // color
 %color--white      { color: $color-white  } 
 %color--black      { color: $color-black  } 
@@ -37,7 +45,7 @@ $font-size--base: 1em;
 %color--secondary  { color: $color-secondary  } 
 
 // font
-%font-size--1em  { font-size: 1em   }; //16px !default
+%font-size--base { font-size: 1em   }; //16px !default
 
 %font-weight--100 { font-weight: 100 ; }
 %font-weight--200 { font-weight: 200 ; }
@@ -72,12 +80,6 @@ $font-size--base: 1em;
 %margin-right--base  { margin-right:  $font-size--base; }
 %margin-left--base   { margin-left:   $font-size--base; }
 
-%bg--primary    { background-color: $color-primary; }
-%bg--secondary  { background-color: $color-secondary; }
-%bg--white      { background-color: $color-white; }
-%bg--black      { background-color: $color-black; } 
-
-
 //overflow 
 %overflow-x--hidden { overflow-x:hidden; }
 %overflow-y--hidden { overflow-y:hidden; }
@@ -91,6 +93,9 @@ $font-size--base: 1em;
 %position--relative { position: relative; }
 %position--absolute { position: absolute; }
 %position--fixed 	  { position: fixed; } 
+
+%text-transform--uppercase { text-transform: uppercase; }
+%text-transform--lowercase { text-transform: lowercase; }
 
 //Position location
 %top--0	      { top:    0;    } 
@@ -108,8 +113,11 @@ $font-size--base: 1em;
 %bottom--auto { bottom: auto; } 
 %top--auto    { top:    auto; } 
 
-%pointer-events--none  { pointer-events: none; }
+%opacity--0 { opacity: 0; }
+%opacity--1 { opacity: 1; }
 
+%pointer-events--none { pointer-events: none; }
+%pointer-events--auto { pointer-events: auto; }
 //Text
 %text-align--center         { text-align: center; } 
 %text-overflow--ellipsis    { @include text-wrapper;}
@@ -132,3 +140,10 @@ $font-size--base: 1em;
 	@extend %margin-left--auto;
 	@extend %margin-right--auto;
 }
+
+%z-index--1 { z-index: 1; }
+%z-index--2 { z-index: 2; }
+%z-index--3 { z-index: 3; }
+%z-index--4 { z-index: 4; }
+%z-index--5 { z-index: 5; }
+%z-index--6 { z-index: 6; }
