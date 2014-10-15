@@ -17,15 +17,16 @@ $font-size--base: 1em;
 
 //PLACEHOLDERS
 
-%border-radius--50percent { border-radius:50% 50% 50% 50% ; }
-%border-radius-2px { border-radius:em(2px); } 
+%border-radius--50percent { border-radius: 50%; }
+%border-radius-2px { border-radius: em(2px); } 
 
-%box-sizing--border-box { @include box-sizing( border-box ); } 
+%box-sizing--border-box { @include box-sizing(border-box); } 
 
-%display--block         { display: block; }
-%display--inline        { display: inline; }
-%display--inline-block  { display: inline-block; } 
-%display--none          { display: none; }
+%display--block { display: block; }
+%display--flex { display: flex; }
+%display--inline { display: inline; }
+%display--inline-block { display: inline-block; } 
+%display--none { display: none; }
 
 //Clearfix
 %clearfix {
