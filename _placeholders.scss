@@ -34,11 +34,21 @@ $font-size--base: 1em;
 	//*zoom: 1;  /* The star is here to prevent other browsers from reading and applying this rule. */
 	&:after { content: ""; display: table; clear: both; }
 }
-%bg--transparent { background-color: transparent; }
-%bg--primary { background-color: $color-primary; }
-%bg--secondary { background-color: $color-secondary; }
-%bg--white { background-color: $color-white; }
-%bg--black { background-color: $color-black; } 
+
+
+
+%background-color--transparent { background-color: transparent; }
+%background-color--primary { background-color: $color-primary; }
+%background-color--secondary { background-color: $color-secondary; }
+%background-color--white { background-color: $color-white; }
+%background-color--black { background-color: $color-black; } 
+
+%background-repeat--repeat {background-repeat: repeat; }
+%background-repeat--no-repeat {background-repeat: no-repeat; }
+
+%background-size--cover {background-size: cover;}
+
+
 
 // color
 %color--white { color: $color-white;  } 
@@ -55,6 +65,9 @@ $font-size--base: 1em;
 %font-weight--400 { font-weight: 400 ; }
 %font-weight--500 { font-weight: 500 ; }
  
+%flex-direction--column { flex-direction: column ;}
+%flex-direction--row { flex-direction: row ;}
+
 %float--left { float: left ;}
 %float--right { float: right ;}
 %float--none { float: none ;}
