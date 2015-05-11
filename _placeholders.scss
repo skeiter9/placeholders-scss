@@ -1,32 +1,32 @@
 //Require bourbon
  //@import "bourbon/bourbon";
- 
+
 // VARIABLES
-$color-primary         : #03a9f4 !default;  
-$color-secondary       : #009688 !default;   
-$color-black           : #000000 !default;   
-$color-white           : #ffffff !default;   
+$color-primary : #03a9f4 !default;
+$color-secondary : #009688 !default;
+$color-black : #000000 !default;
+$color-white : #ffffff !default;
 
 $font-size--base: 1em;
 
-// MIXINS 
+// MIXINS
 @mixin text-wrapper() { //apply text's parent
   text-overflow: ellipsis;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 //PLACEHOLDERS
 %align-items--center{ align-items: center};
 
 %border-radius--50percent { border-radius: 50%; }
-%border-radius-2px { border-radius: em(2px); } 
+%border-radius-2px { border-radius: em(2px); }
 
-%box-sizing--border-box { @include box-sizing(border-box); } 
+%box-sizing--border-box { @include box-sizing(border-box); }
 
 %display--block { display: block; }
 %display--flex { display: flex; }
 %display--inline { display: inline; }
-%display--inline-block { display: inline-block; } 
+%display--inline-block { display: inline-block; }
 %display--none { display: none; }
 
 //Clearfix
@@ -41,7 +41,7 @@ $font-size--base: 1em;
 %background-color--primary { background-color: $color-primary; }
 %background-color--secondary { background-color: $color-secondary; }
 %background-color--white { background-color: $color-white; }
-%background-color--black { background-color: $color-black; } 
+%background-color--black { background-color: $color-black; }
 
 %background-repeat--repeat {background-repeat: repeat; }
 %background-repeat--no-repeat {background-repeat: no-repeat; }
@@ -51,20 +51,20 @@ $font-size--base: 1em;
 
 
 // color
-%color--white { color: $color-white;  } 
-%color--black { color: $color-black;  } 
-%color--primary { color: $color-primary;  } 
-%color--secondary  { color: $color-secondary;  } 
+%color--white {color: $color-white;}
+%color--black {color: $color-black;}
+%color--primary {color: $color-primary;}
+%color--secondary  {color: $color-secondary;}
 
 // font
-%font-size--base { font-size: 1em   }; //16px !default
+%font-size--base { font-size: $font-size--base;}; //16px !default
 
 %font-weight--100 { font-weight: 100 ; }
 %font-weight--200 { font-weight: 200 ; }
 %font-weight--300 { font-weight: 300 ; }
 %font-weight--400 { font-weight: 400 ; }
 %font-weight--500 { font-weight: 500 ; }
- 
+
 %flex-direction--column { flex-direction: column ;}
 %flex-direction--row { flex-direction: row ;}
 
@@ -97,7 +97,7 @@ $font-size--base: 1em;
 %margin-right--base  { margin-right:  $font-size--base; }
 %margin-left--base   { margin-left:   $font-size--base; }
 
-//overflow 
+//overflow
 %overflow-x--hidden { overflow-x:hidden; }
 %overflow-y--hidden { overflow-y:hidden; }
 %overflow--hidden   { overflow:hidden; }
@@ -109,26 +109,26 @@ $font-size--base: 1em;
 //Position type
 %position--relative { position: relative; }
 %position--absolute { position: absolute; }
-%position--fixed 	  { position: fixed; } 
+%position--fixed 	  { position: fixed; }
 
 %text-transform--uppercase { text-transform: uppercase; }
 %text-transform--lowercase { text-transform: lowercase; }
 
 //Position location
-%top--0 { top: 0;} 
-%bottom--0 { bottom: 0;} 
-%left--0 { left: 0;} 
-%right--0 { right: 0;} 
+%top--0 { top: 0;}
+%bottom--0 { bottom: 0;}
+%left--0 { left: 0;}
+%right--0 { right: 0;}
 
-%top--base { top:    $font-size--base;    } 
-%bottom--base { bottom: $font-size--base;    } 
-%left--base	{ left:   $font-size--base;    } 
-%right--base { right:  $font-size--base;    } 
+%top--base { top:    $font-size--base;    }
+%bottom--base { bottom: $font-size--base;    }
+%left--base	{ left:   $font-size--base;    }
+%right--base { right:  $font-size--base;    }
 
-%left--auto { left:   auto; } 
-%right--auto { right:  auto; } 
-%bottom--auto { bottom: auto; } 
-%top--auto { top:    auto; } 
+%left--auto { left:   auto; }
+%right--auto { right:  auto; }
+%bottom--auto { bottom: auto; }
+%top--auto { top:    auto; }
 
 %opacity--0 { opacity: 0; }
 %opacity--1 { opacity: 1; }
@@ -136,10 +136,10 @@ $font-size--base: 1em;
 %pointer-events--none { pointer-events: none; }
 %pointer-events--auto { pointer-events: auto; }
 //Text
-%text-align--center { text-align: center; } 
+%text-align--center { text-align: center; }
 %text-overflow--ellipsis { @include text-wrapper;}
 %text-transform--capitalize { text-transform: capitalize;}
- 
+
 //Width
 %width--10percent { width:10%;  }
 %width--20percent { width:20%;  }
