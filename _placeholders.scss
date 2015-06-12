@@ -1,13 +1,6 @@
 //Require bourbon
- //@import "bourbon/bourbon";
-
-// VARIABLES
-$color-primary : #03a9f4 !default;
-$color-secondary : #009688 !default;
-$color-black : #000000 !default;
-$color-white : #ffffff !default;
-
-$font-size--base: 1em;
+//@import "bourbon/bourbon";
+@import 'variables';
 
 // MIXINS
 @mixin text-wrapper() { //apply text's parent
@@ -21,7 +14,7 @@ $font-size--base: 1em;
 %border-radius--50percent { border-radius: 50%; }
 %border-radius-2px { border-radius: em(2px); }
 
-%box-sizing--border-box { @include box-sizing(border-box); }
+%box-sizing--border-box { box-sizing: border-box; }
 
 %display--block { display: block; }
 %display--flex { display: flex; }
@@ -34,8 +27,6 @@ $font-size--base: 1em;
 	//*zoom: 1;  /* The star is here to prevent other browsers from reading and applying this rule. */
 	&:after { content: ""; display: table; clear: both; }
 }
-
-
 
 %background-color--transparent { background-color: transparent; }
 %background-color--primary { background-color: $color-primary; }
